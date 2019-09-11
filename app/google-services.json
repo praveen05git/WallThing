@@ -1,0 +1,48 @@
+{
+  "project_info": {
+    "project_number": "681509983188",
+    "firebase_url": "https://wallapaper-ecfca.firebaseio.com",
+    "project_id": "wallapaper-ecfca",
+    "storage_bucket": "wallapaper-ecfca.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:681509983188:android:fb10797460a3865817bc41",
+        "android_client_info": {
+          "package_name": "com.hencesimplified.wallapaper"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "681509983188-q27oolpolie22kkus3snh9rgv4846t0i.apps.googleusercontent.com",
+          "client_type": 1,
+          "android_info": {
+            "package_name": "com.hencesimplified.wallapaper",
+            "certificate_hash": "02ac394146d526698a0f6817ce6ca86edd9a3f6d"
+          }
+        },
+        {
+          "client_id": "681509983188-63bs2v87ius96o25gn64p7kq1vpp0pba.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyC0A8ZWDOtcd8KGnOmcQ9ClKjMGKK-Xl4E"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": [
+            {
+              "client_id": "681509983188-63bs2v87ius96o25gn64p7kq1vpp0pba.apps.googleusercontent.com",
+              "client_type": 3
+            }
+          ]
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}
