@@ -65,8 +65,8 @@ public class photo_view extends AppCompatActivity {
             public void onClick(View view) {
 
                 AlertDialog alert_dia1=new androidx.appcompat.app.AlertDialog.Builder(photo_view.this).create();
-                alert_dia1.setTitle("Remove Ads!");
-                alert_dia1.setMessage("Download the Jotter Lite Pro to enjoy Ad-free service!! Download Now?");
+                alert_dia1.setTitle("Set as wallpaper?");
+                alert_dia1.setMessage("Are you sure to set this picture as wallpaper?");
 
                 alert_dia1.setButton(androidx.appcompat.app.AlertDialog.BUTTON_POSITIVE, "Yes", new DialogInterface.OnClickListener() {
                     @Override
@@ -125,6 +125,7 @@ public class photo_view extends AppCompatActivity {
                                 bitmap.compress(Bitmap.CompressFormat.JPEG, 100, ostream);
                                 ostream.flush();
                                 ostream.close();
+                                Toast.makeText(getApplicationContext(),"Downloaded",Toast.LENGTH_SHORT).show();
                             } catch (IOException e) {
                                 Log.e("IO", e.getLocalizedMessage());
                             }

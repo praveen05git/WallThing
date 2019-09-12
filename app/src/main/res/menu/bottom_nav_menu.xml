@@ -3,17 +3,17 @@
 
     <item
         android:id="@+id/weekly"
-        android:icon="@drawable/ic_home_black_24dp"
-        android:title="Weekly" />
+        android:icon="@drawable/ic_filter_7_black_24dp"
+        android:title="Weekly 7" />
 
     <item
         android:id="@+id/unlocked"
         android:icon="@drawable/ic_dashboard_black_24dp"
-        android:title="Unlocked" />
+        android:title="Casual" />
 
     <item
         android:id="@+id/locked"
-        android:icon="@drawable/ic_notifications_black_24dp"
-        android:title="Locked" />
+        android:icon="@drawable/ic_local_offer_black_24dp"
+        android:title="Exclusive" />
 
 </menu>

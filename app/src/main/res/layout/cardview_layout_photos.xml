@@ -5,6 +5,7 @@
     xmlns:cardview="http://schemas.android.com/apk/res-auto"
     android:layout_margin="5dp"
     cardview:cardCornerRadius="4dp"
+    android:backgroundTint="@color/colorPrimary"
     android:id="@+id/cardview_id">
     <LinearLayout
         android:orientation="vertical"
@@ -17,14 +18,16 @@
             android:layout_height="160dp"
             android:background="#2d2d2d"
             android:scaleType="centerCrop" />
+
         <TextView
             android:id="@+id/photo_title_id"
-            android:textColor="#2d2d2d"
-            android:gravity="center"
-            android:textSize="13sp"
             android:layout_width="match_parent"
             android:layout_height="match_parent"
-            android:text="Book"/>
+            android:gravity="center"
+            android:text="Book"
+            android:textColor="#FFFFFF"
+            android:textSize="13sp"
+            android:textStyle="bold" />
     </LinearLayout>
 
 </androidx.cardview.widget.CardView>
