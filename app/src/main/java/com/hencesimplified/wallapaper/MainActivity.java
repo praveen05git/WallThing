@@ -53,30 +53,6 @@ public class MainActivity extends AppCompatActivity {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_main);
 
-
-
-/*
-        if(page==1)
-        {
-            loadFragment(new weekly_fg());
-        }
-        else if(page==2)
-        {
-            loadFragment(new unlocked_fg());
-        }
-        else if(page==3)
-        {
-            loadFragment(new locked_fg());
-        }
-        else
-        {
-            loadFragment(new weekly_fg());
-        }
-
-         */
-
-        loadFragment(new unlocked_fg());
-
         navView = findViewById(R.id.nav_view);
 
         SharedPreferences preferences=getApplicationContext().getSharedPreferences("MyPref",0);
