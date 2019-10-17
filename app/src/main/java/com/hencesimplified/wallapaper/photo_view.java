@@ -1,6 +1,7 @@
 package com.hencesimplified.wallapaper;
 
 import android.Manifest;
+import android.app.Activity;
 import android.app.WallpaperManager;
 import android.content.DialogInterface;
 import android.content.Intent;
@@ -21,7 +22,9 @@ import androidx.appcompat.app.AlertDialog;
 import androidx.appcompat.app.AppCompatActivity;
 import androidx.core.app.ActivityCompat;
 import androidx.core.content.ContextCompat;
+import androidx.fragment.app.Fragment;
 
+import com.google.android.material.bottomnavigation.BottomNavigationView;
 import com.squareup.picasso.Picasso;
 import com.squareup.picasso.Target;
 
@@ -48,8 +51,9 @@ public class photo_view extends AppCompatActivity {
         btn_download=findViewById(R.id.btn_download);
         btn_setwall=findViewById(R.id.btn_setwall);
         sample_img=findViewById(R.id.imageView);
+
         Intent intent=getIntent();
-        url_img=intent.getStringExtra("img_url");
+        url_img=intent.getStringExtra("img_url_ad");
         Load_img(url_img);
 
         btn_download.setOnClickListener(new View.OnClickListener() {
@@ -184,6 +188,8 @@ public class photo_view extends AppCompatActivity {
     @Override
     public boolean onSupportNavigateUp(){
         finish();
+        Intent PhotoIntent1 = new Intent(photo_view.this, MainActivity.class);
+        startActivity(PhotoIntent1);
         return true;
     }
 
@@ -193,5 +199,15 @@ public class photo_view extends AppCompatActivity {
         int check= ContextCompat.checkSelfPermission(this,permission);
         return (check== PackageManager.PERMISSION_GRANTED);
     }
+
+    @Override
+
+    public void onBackPressed()
+    {
+        finish();
+        Intent page_intent=new Intent(photo_view.this,MainActivity.class);
+        startActivity(page_intent);
+    }
+
 
 }

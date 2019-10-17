@@ -16,6 +16,8 @@ import androidx.cardview.widget.CardView;
 import androidx.recyclerview.widget.RecyclerView;
 
 import com.squareup.picasso.Picasso;
+import com.unity3d.ads.IUnityAdsListener;
+import com.unity3d.ads.UnityAds;
 
 import java.util.List;
 
@@ -54,15 +56,15 @@ public class RecyclerViewAdapter extends RecyclerView.Adapter<RecyclerViewAdapte
              public void onClick(View view) {
 
                  androidx.appcompat.app.AlertDialog alert_dia1=new androidx.appcompat.app.AlertDialog.Builder(mcontext).create();
-                 alert_dia1.setTitle("Remove Ads!");
-                 alert_dia1.setMessage("Download the Jotter Lite Pro to enjoy Ad-free service!! Download Now?");
+                 alert_dia1.setTitle("Watch Ad!");
+                 alert_dia1.setMessage("Do you want to watch an Ad to download or set the wallpaper?");
 
                  alert_dia1.setButton(androidx.appcompat.app.AlertDialog.BUTTON_POSITIVE, "Yes", new DialogInterface.OnClickListener() {
                      @Override
                      public void onClick(DialogInterface dialog, int which) {
 
                          String img= mdata.get(position).getUrl();
-                         Intent PhotoIntent = new Intent(mcontext, photo_view.class);
+                         Intent PhotoIntent = new Intent(mcontext, ad_Screen.class);
                          PhotoIntent.putExtra("img_url", img);
                          mcontext.startActivity(PhotoIntent);
                      }
@@ -73,6 +75,7 @@ public class RecyclerViewAdapter extends RecyclerView.Adapter<RecyclerViewAdapte
                          dialog.cancel();
                      }
                  });
+                 alert_dia1.setCanceledOnTouchOutside(false);
                  alert_dia1.show();
 
              }

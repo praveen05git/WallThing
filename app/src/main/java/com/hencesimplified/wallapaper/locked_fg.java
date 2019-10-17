@@ -1,6 +1,8 @@
 package com.hencesimplified.wallapaper;
 
 
+import android.content.Intent;
+import android.content.SharedPreferences;
 import android.os.Bundle;
 
 import androidx.annotation.NonNull;
@@ -54,6 +56,12 @@ public class locked_fg extends Fragment {
         myrv.setLayoutManager(new GridLayoutManager(getContext(),3));
         myAdap = new RecyclerViewAdapter(getContext(),listPhotos);
 
+
+        SharedPreferences pref = getContext().getSharedPreferences("MyPref", 0); // 0 - for private mode
+        SharedPreferences.Editor editor = pref.edit();
+        editor.putInt("Page",3);
+        editor.apply();
+
         databaseReference = firebaseDatabase.getReference("locked");
 
 
@@ -78,7 +86,6 @@ public class locked_fg extends Fragment {
 
         return root;
     }
-
 
 
 }

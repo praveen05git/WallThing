@@ -50,9 +50,9 @@ public class RecyclerViewAdapter1 extends RecyclerView.Adapter<RecyclerViewAdapt
              @Override
              public void onClick(View view) {
                 String img= mdata.get(position).getUrl();
-                 Intent PhotoIntent = new Intent(mcontext, photo_view.class);
-                 PhotoIntent.putExtra("img_url", img);
-                 mcontext.startActivity(PhotoIntent);
+                 Intent FreePhotoIntent = new Intent(mcontext, photo_view.class);
+                 FreePhotoIntent.putExtra("img_url_ad", img);
+                 mcontext.startActivity(FreePhotoIntent);
              }
          });
 
@@ -63,6 +63,7 @@ public class RecyclerViewAdapter1 extends RecyclerView.Adapter<RecyclerViewAdapt
     public int getItemCount() {
         return mdata.size();
     }
+
 
     public static class MyViewFolder extends RecyclerView.ViewHolder{
         TextView tv_book_title;
