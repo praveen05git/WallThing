@@ -75,6 +75,12 @@ public class RecyclerViewAdapter extends RecyclerView.Adapter<RecyclerViewAdapte
                          dialog.cancel();
                      }
                  });
+                 alert_dia1.setButton(AlertDialog.BUTTON_NEUTRAL, "Remove Ads", new DialogInterface.OnClickListener() {
+                     @Override
+                     public void onClick(DialogInterface dialogInterface, int i) {
+
+                     }
+                 });
                  alert_dia1.setCanceledOnTouchOutside(false);
                  alert_dia1.show();
 
