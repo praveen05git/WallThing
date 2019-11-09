@@ -1,17 +1,14 @@
 package com.hencesimplified.wallapaper;
 
 import android.Manifest;
-import android.app.Activity;
 import android.app.WallpaperManager;
 import android.content.DialogInterface;
 import android.content.Intent;
 import android.content.pm.PackageManager;
 import android.graphics.Bitmap;
-import android.graphics.BitmapFactory;
 import android.graphics.drawable.Drawable;
 import android.os.Bundle;
 import android.os.Environment;
-import android.provider.MediaStore;
 import android.util.Log;
 import android.view.View;
 import android.widget.Button;
@@ -22,9 +19,6 @@ import androidx.appcompat.app.AlertDialog;
 import androidx.appcompat.app.AppCompatActivity;
 import androidx.core.app.ActivityCompat;
 import androidx.core.content.ContextCompat;
-import androidx.fragment.app.Fragment;
-
-import com.google.android.material.bottomnavigation.BottomNavigationView;
 import com.squareup.picasso.Picasso;
 import com.squareup.picasso.Target;
 
@@ -61,6 +55,8 @@ public class photo_view extends AppCompatActivity {
             public void onClick(View view) {
                 Picasso.get().load(url_img)
                         .into(getTarget(url_img));
+
+
             }
         });
 
@@ -129,7 +125,7 @@ public class photo_view extends AppCompatActivity {
                                 bitmap.compress(Bitmap.CompressFormat.JPEG, 100, ostream);
                                 ostream.flush();
                                 ostream.close();
-                                Toast.makeText(getApplicationContext(),"Downloaded",Toast.LENGTH_SHORT).show();
+
                             } catch (IOException e) {
                                 Log.e("IO", e.getLocalizedMessage());
                             }
@@ -137,9 +133,12 @@ public class photo_view extends AppCompatActivity {
                         }
 
 
+
+
                     }
                 }).start();
 
+                Toast.makeText(getApplicationContext(),"Downloaded",Toast.LENGTH_SHORT).show();
             }
 
             @Override

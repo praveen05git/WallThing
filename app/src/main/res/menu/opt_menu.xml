@@ -7,10 +7,13 @@
         android:title="Remove Ads" />
     <item
         android:id="@+id/opt_rate"
-        android:title="Rate Us!" />
+        android:title="Rate Wall Thing!" />
     <item
         android:id="@+id/opt_more"
         android:title="More Apps" />
+    <item
+        android:id="@+id/opt_policy"
+        android:title="Privacy Policy" />
     <item
         android:id="@+id/opt_about"
         android:title="About" />

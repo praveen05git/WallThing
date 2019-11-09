@@ -161,7 +161,7 @@ public class MainActivity extends AppCompatActivity {
                 alert_dia1.setButton(AlertDialog.BUTTON_POSITIVE, "Yes", new DialogInterface.OnClickListener() {
                     @Override
                     public void onClick(DialogInterface dialog, int which) {
-                        startActivity(new Intent(Intent.ACTION_VIEW, Uri.parse("https://play.google.com/store/apps/details?id=com.jotterpro.notes&hl=en_IN")));
+                        startActivity(new Intent(Intent.ACTION_VIEW, Uri.parse("https://play.google.com/store/apps/details?id=com.hencesimplified.wallpaperpro")));
                     }
                 });
                 alert_dia1.setButton(AlertDialog.BUTTON_NEGATIVE, "No", new DialogInterface.OnClickListener() {
@@ -175,14 +175,14 @@ public class MainActivity extends AppCompatActivity {
                 return true;
 
             case R.id.opt_rate:
-                Intent playStore = new Intent(Intent.ACTION_VIEW, Uri.parse("https://play.google.com/store/apps/details?id=com.jotter.notes"));
+                Intent playStore = new Intent(Intent.ACTION_VIEW, Uri.parse("https://play.google.com/store/apps/details?id=com.hencesimplified.wallpaper"));
                 startActivity(playStore);
                 return true;
 
             case R.id.opt_more:
                 try {
-                    //replace &quot;Unified+Apps&quot; with your developer name https://play.google.com/store/apps/developer?id=Hence+Simplified&hl=en
-                    startActivity(new Intent(Intent.ACTION_VIEW, Uri.parse("market://search?q=pub:Hence Simplified")));
+
+                    startActivity(new Intent(Intent.ACTION_VIEW, Uri.parse("http://play.google.com/store/apps/dev?id=7031227816779180923")));
                 }
                 catch (android.content.ActivityNotFoundException e) {
                     //replace &quot;Unified+Apps&quot; with your developer name
@@ -191,7 +191,14 @@ public class MainActivity extends AppCompatActivity {
                 return true;
 
             case R.id.opt_about:
+                finish();
+                Intent page_intent=new Intent(MainActivity.this,about.class);
+                startActivity(page_intent);
+                return true;
 
+            case R.id.opt_policy:
+                Intent privacyPolicy = new Intent(Intent.ACTION_VIEW, Uri.parse("https://hencesimplified.wixsite.com/website/privacy-policy-wallthing"));
+                startActivity(privacyPolicy);
                 return true;
 
             default:
