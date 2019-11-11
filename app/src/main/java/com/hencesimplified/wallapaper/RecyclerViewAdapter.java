@@ -79,6 +79,7 @@ public class RecyclerViewAdapter extends RecyclerView.Adapter<RecyclerViewAdapte
                      @Override
                      public void onClick(DialogInterface dialogInterface, int i) {
 
+
                      }
                  });
                  alert_dia1.setCanceledOnTouchOutside(false);
