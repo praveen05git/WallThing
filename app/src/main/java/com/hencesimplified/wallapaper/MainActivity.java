@@ -10,9 +10,11 @@ import android.os.Bundle;
 import android.view.Menu;
 import android.view.MenuInflater;
 import android.view.MenuItem;
+import android.view.View;
 import android.widget.Toast;
 
 import com.google.android.material.bottomnavigation.BottomNavigationView;
+import com.google.android.material.floatingactionbutton.FloatingActionButton;
 import com.unity3d.ads.UnityAds;
 
 import androidx.annotation.NonNull;
@@ -26,7 +28,7 @@ import androidx.fragment.app.Fragment;
 public class MainActivity extends AppCompatActivity {
 
     BottomNavigationView navView;
-
+    FloatingActionButton info;
 
     private BottomNavigationView.OnNavigationItemSelectedListener mOnNavigationItemSelectedListener
             =  new BottomNavigationView.OnNavigationItemSelectedListener() {
@@ -57,6 +59,7 @@ public class MainActivity extends AppCompatActivity {
         setContentView(R.layout.activity_main);
 
         navView = findViewById(R.id.nav_view);
+        info=findViewById(R.id.floatingActionButton);
 
         SharedPreferences preferences=getApplicationContext().getSharedPreferences("MyPref",0);
         int page=preferences.getInt("Page",-1);
@@ -82,6 +85,14 @@ public class MainActivity extends AppCompatActivity {
         }
 
         navView.setOnNavigationItemSelectedListener(mOnNavigationItemSelectedListener);
+
+        info.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View view) {
+                Intent page_intent=new Intent(MainActivity.this,information.class);
+                startActivity(page_intent);
+            }
+        });
     }
 
     public boolean checkPermission(String permission)

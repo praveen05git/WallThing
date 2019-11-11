@@ -8,6 +8,7 @@ import android.view.View;
 import android.widget.Button;
 import android.widget.ProgressBar;
 import android.widget.TextView;
+import android.widget.Toast;
 
 import com.unity3d.ads.IUnityAdsListener;
 import com.unity3d.ads.UnityAds;
@@ -42,6 +43,7 @@ public class ad_Screen extends AppCompatActivity {
             @Override
             public void onClick(View view) {
 
+                UnityAds.initialize(ad_Screen.this,"3290908",listener);
                 onStart();
 
             }
@@ -60,7 +62,7 @@ public class ad_Screen extends AppCompatActivity {
 
         @Override
         public void onUnityAdsReady(String s) {
-
+            btn_retry.setVisibility(View.VISIBLE);
         }
 
         @Override
@@ -82,7 +84,8 @@ public class ad_Screen extends AppCompatActivity {
         public void onUnityAdsError(UnityAds.UnityAdsError unityAdsError, String s) {
 
             txt_internet_err.setVisibility(View.VISIBLE);
-            btn_retry.setVisibility(View.VISIBLE);
+            UnityAds.initialize(ad_Screen.this,"3290908",listener);
+            UnityAds.show(ad_Screen.this,"rewardedVideo");
         }
     }
 
@@ -93,13 +96,13 @@ public class ad_Screen extends AppCompatActivity {
 
         if(UnityAds.isReady("rewardedVideo"))
         {
+            //UnityAds.initialize(ad_Screen.this,"3290908",listener);
             UnityAds.show(ad_Screen.this,"rewardedVideo");
         }
         else
         {
             UnityAds.initialize(ad_Screen.this,"3290908",listener);
             txt_internet_err.setVisibility(View.VISIBLE);
-            btn_retry.setVisibility(View.VISIBLE);
         }
     }
 
