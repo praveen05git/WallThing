@@ -16,4 +16,9 @@
         android:icon="@drawable/ic_local_offer_black_24dp"
         android:title="Exclusive" />
 
+    <item
+        android:id="@+id/photos"
+        android:icon="@drawable/ic_local_offer_black_24dp"
+        android:title="Exclusive" />
+
 </menu>

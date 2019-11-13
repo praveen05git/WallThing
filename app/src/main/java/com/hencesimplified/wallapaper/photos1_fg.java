@@ -27,7 +27,7 @@ import java.util.List;
 /**
  * A simple {@link Fragment} subclass.
  */
-public class weekly_fg extends Fragment {
+public class photos1_fg extends Fragment {
 
     private List<sample_photos> listPhotos;
     private RecyclerView myrv;
@@ -35,8 +35,7 @@ public class weekly_fg extends Fragment {
     private DatabaseReference databaseReference;
     private RecyclerViewAdapter1 myAdap;
 
-
-    public weekly_fg() {
+    public photos1_fg() {
         // Required empty public constructor
     }
 
@@ -45,8 +44,7 @@ public class weekly_fg extends Fragment {
     public View onCreateView(LayoutInflater inflater, ViewGroup container,
                              Bundle savedInstanceState) {
         // Inflate the layout for this fragment
-        View root=inflater.inflate(R.layout.fragment_weekly_fg, container, false);
-
+        View root= inflater.inflate(R.layout.fragment_photos1, container, false);
 
         firebaseDatabase=FirebaseDatabase.getInstance();
         listPhotos=new ArrayList<>();
@@ -58,11 +56,11 @@ public class weekly_fg extends Fragment {
 
         SharedPreferences pref = getContext().getSharedPreferences("MyPref", 0); // 0 - for private mode
         SharedPreferences.Editor editor = pref.edit();
-        editor.putInt("Page",1);
+        editor.putInt("Page",2);
         editor.apply();
 
+        databaseReference = firebaseDatabase.getReference("unlocked");
 
-        databaseReference = firebaseDatabase.getReference("samples");
 
         databaseReference.addValueEventListener(new ValueEventListener() {
             @Override
@@ -82,7 +80,6 @@ public class weekly_fg extends Fragment {
                 Toast.makeText(getContext(), databaseError.getMessage(), Toast.LENGTH_LONG).show();
             }
         });
-
 
         return root;
     }

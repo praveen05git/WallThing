@@ -17,7 +17,7 @@ public class ad_Screen extends AppCompatActivity {
 
     private String url_img;
     Button btn_retry;
-    TextView txt_internet_err;
+    TextView txt_internet_err,txt_internet_err2;
     ProgressBar pgr_internet;
 
     UnityAdsListener listener=new UnityAdsListener();
@@ -37,6 +37,7 @@ public class ad_Screen extends AppCompatActivity {
 
         btn_retry=findViewById(R.id.btn_retry_internet);
         txt_internet_err=findViewById(R.id.txt_internet_err);
+        txt_internet_err2=findViewById(R.id.txt_internet_err2);
         pgr_internet=findViewById(R.id.pgr_internet);
 
         btn_retry.setOnClickListener(new View.OnClickListener() {
@@ -84,6 +85,7 @@ public class ad_Screen extends AppCompatActivity {
         public void onUnityAdsError(UnityAds.UnityAdsError unityAdsError, String s) {
 
             txt_internet_err.setVisibility(View.VISIBLE);
+            txt_internet_err2.setVisibility(View.VISIBLE);
             UnityAds.initialize(ad_Screen.this,"3290908",listener);
             UnityAds.show(ad_Screen.this,"rewardedVideo");
         }
@@ -103,6 +105,7 @@ public class ad_Screen extends AppCompatActivity {
         {
             UnityAds.initialize(ad_Screen.this,"3290908",listener);
             txt_internet_err.setVisibility(View.VISIBLE);
+            txt_internet_err2.setVisibility(View.VISIBLE);
         }
     }
 

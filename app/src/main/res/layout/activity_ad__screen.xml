@@ -7,6 +7,21 @@
     android:background="@color/bgColor"
     tools:context=".ad_Screen">
 
+    <TextView
+        android:id="@+id/txt_internet_err2"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="76dp"
+        android:layout_marginLeft="76dp"
+        android:text="First time access takes some time"
+        android:textColor="#ffffff"
+        android:textSize="18sp"
+        android:textStyle="bold"
+        android:visibility="invisible"
+        app:layout_constraintBottom_toTopOf="@+id/btn_retry_internet"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/txt_internet_err" />
+
     <Button
         android:id="@+id/btn_retry_internet"
         android:layout_width="wrap_content"
@@ -14,13 +29,13 @@
         android:layout_marginStart="160dp"
         android:layout_marginLeft="160dp"
         android:background="@color/buttonColor"
-        android:text="Retry"
+        android:text="Continue"
         android:textColor="#ffffff"
         android:textStyle="bold"
         android:visibility="invisible"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/txt_internet_err" />
+        app:layout_constraintTop_toBottomOf="@+id/txt_internet_err2" />
 
     <ProgressBar
         android:id="@+id/pgr_internet"
@@ -37,14 +52,12 @@
         android:id="@+id/txt_internet_err"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_marginStart="80dp"
-        android:layout_marginLeft="80dp"
         android:text="Check your internet connection"
         android:textColor="#ffffff"
         android:textSize="18sp"
         android:textStyle="bold"
         android:visibility="invisible"
-        app:layout_constraintBottom_toTopOf="@+id/btn_retry_internet"
-        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintBottom_toTopOf="@+id/txt_internet_err2"
+        app:layout_constraintStart_toStartOf="@+id/txt_internet_err2"
         app:layout_constraintTop_toBottomOf="@+id/pgr_internet" />
 </androidx.constraintlayout.widget.ConstraintLayout>
