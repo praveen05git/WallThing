@@ -48,6 +48,9 @@ public class MainActivity extends AppCompatActivity {
                 case R.id.locked:
                     fragment=new locked_fg();
                     break;
+                case R.id.photos:
+                    fragment=new locked_fg();
+                    break;
             }
             return loadFragment(fragment);
         }
