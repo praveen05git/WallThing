@@ -11,11 +11,9 @@ import android.view.Menu;
 import android.view.MenuInflater;
 import android.view.MenuItem;
 import android.view.View;
-import android.widget.Toast;
 
 import com.google.android.material.bottomnavigation.BottomNavigationView;
 import com.google.android.material.floatingactionbutton.FloatingActionButton;
-import com.unity3d.ads.UnityAds;
 
 import androidx.annotation.NonNull;
 import androidx.appcompat.app.AlertDialog;
@@ -48,8 +46,8 @@ public class MainActivity extends AppCompatActivity {
                 case R.id.locked:
                     fragment=new locked_fg();
                     break;
-                case R.id.photos:
-                    fragment=new locked_fg();
+                case R.id.wildlife:
+                    fragment=new photographer1_fg();
                     break;
             }
             return loadFragment(fragment);
@@ -80,6 +78,11 @@ public class MainActivity extends AppCompatActivity {
         {
             loadFragment(new locked_fg());
             navView.setSelectedItemId(R.id.locked);
+        }
+        else if(page==4)
+        {
+            loadFragment(new photographer1_fg());
+            navView.setSelectedItemId(R.id.wildlife);
         }
         else
         {

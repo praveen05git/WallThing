@@ -17,8 +17,8 @@
         android:title="Exclusive" />
 
     <item
-        android:id="@+id/photos"
-        android:icon="@drawable/ic_local_offer_black_24dp"
-        android:title="Exclusive" />
+        android:id="@+id/wildlife"
+        android:icon="@drawable/ic_pets_black_24dp"
+        android:title="WildlIfe" />
 
 </menu>
