@@ -54,7 +54,7 @@ public class photographer1_fg extends Fragment {
 
         firebaseDatabase=FirebaseDatabase.getInstance();
         listPhotos=new ArrayList<>();
-        myrv=root.findViewById(R.id.unlocked_rec_id);
+        myrv=root.findViewById(R.id.photographer1_rec_id);
         link1=root.findViewById(R.id.link1);
         myrv.setHasFixedSize(true);
         myrv.setLayoutManager(new GridLayoutManager(getContext(),3));
@@ -63,7 +63,7 @@ public class photographer1_fg extends Fragment {
 
         SharedPreferences pref = getContext().getSharedPreferences("MyPref", 0); // 0 - for private mode
         SharedPreferences.Editor editor = pref.edit();
-        editor.putInt("Page",4);
+        editor.putInt("Page",3);
         editor.apply();
 
 

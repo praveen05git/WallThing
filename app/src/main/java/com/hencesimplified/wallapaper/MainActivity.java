@@ -49,6 +49,9 @@ public class MainActivity extends AppCompatActivity {
                 case R.id.wildlife:
                     fragment=new photographer1_fg();
                     break;
+                case R.id.scenes:
+                    fragment=new Photographer2_fg();
+                    break;
             }
             return loadFragment(fragment);
         }
@@ -76,13 +79,18 @@ public class MainActivity extends AppCompatActivity {
         }
         else if(page==3)
         {
-            loadFragment(new locked_fg());
-            navView.setSelectedItemId(R.id.locked);
+            loadFragment(new photographer1_fg());
+            navView.setSelectedItemId(R.id.wildlife);
         }
         else if(page==4)
         {
-            loadFragment(new photographer1_fg());
-            navView.setSelectedItemId(R.id.wildlife);
+            loadFragment(new Photographer2_fg());
+            navView.setSelectedItemId(R.id.scenes);
+        }
+        else if(page==5)
+        {
+            loadFragment(new locked_fg());
+            navView.setSelectedItemId(R.id.locked);
         }
         else
         {
@@ -192,7 +200,7 @@ public class MainActivity extends AppCompatActivity {
                 return true;
 
             case R.id.opt_rate:
-                Intent playStore = new Intent(Intent.ACTION_VIEW, Uri.parse("https://play.google.com/store/apps/details?id=com.hencesimplified.wallpaper"));
+                Intent playStore = new Intent(Intent.ACTION_VIEW, Uri.parse("https://play.google.com/store/apps/details?id=com.hencesimplified.wallapaper"));
                 startActivity(playStore);
                 return true;
 

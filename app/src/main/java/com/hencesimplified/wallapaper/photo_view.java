@@ -109,7 +109,7 @@ public class photo_view extends AppCompatActivity {
                         if(Environment.MEDIA_MOUNTED.equals(state) && checkPermission(Manifest.permission.WRITE_EXTERNAL_STORAGE)) {
 
                             File sdCard = Environment.getExternalStorageDirectory();
-                            String folder_main = "Hs_Wallpaper";
+                            String folder_main = "Wall Thing";
 
                             File f = new File(Environment.getExternalStorageDirectory()+"/"+folder_main);
 
@@ -138,7 +138,7 @@ public class photo_view extends AppCompatActivity {
                     }
                 }).start();
 
-                Toast.makeText(getApplicationContext(),"Downloaded",Toast.LENGTH_SHORT).show();
+                Toast.makeText(getApplicationContext(),"Downloaded and saved in Internal Storage->Wall Thing",Toast.LENGTH_SHORT).show();
             }
 
             @Override

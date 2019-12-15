@@ -1,10 +1,14 @@
 package com.hencesimplified.wallapaper;
 
 
+import android.content.DialogInterface;
+import android.content.Intent;
 import android.content.SharedPreferences;
+import android.net.Uri;
 import android.os.Bundle;
 
 import androidx.annotation.NonNull;
+import androidx.appcompat.app.AlertDialog;
 import androidx.fragment.app.Fragment;
 import androidx.recyclerview.widget.GridLayoutManager;
 import androidx.recyclerview.widget.RecyclerView;
@@ -12,6 +16,7 @@ import androidx.recyclerview.widget.RecyclerView;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
+import android.widget.TextView;
 import android.widget.Toast;
 
 import com.google.firebase.database.DataSnapshot;
@@ -27,16 +32,16 @@ import java.util.List;
 /**
  * A simple {@link Fragment} subclass.
  */
-public class weekly_fg extends Fragment {
+public class Photographer2_fg extends Fragment {
 
     private List<sample_photos> listPhotos;
     private RecyclerView myrv;
     private FirebaseDatabase firebaseDatabase;
     private DatabaseReference databaseReference;
     private RecyclerViewAdapter1 myAdap;
+    private TextView link1;
 
-
-    public weekly_fg() {
+    public Photographer2_fg() {
         // Required empty public constructor
     }
 
@@ -44,13 +49,12 @@ public class weekly_fg extends Fragment {
     @Override
     public View onCreateView(LayoutInflater inflater, ViewGroup container,
                              Bundle savedInstanceState) {
-        // Inflate the layout for this fragment
-        View root=inflater.inflate(R.layout.fragment_weekly_fg, container, false);
-
+        View root= inflater.inflate(R.layout.fragment_photographer2_fg, container, false);
 
         firebaseDatabase=FirebaseDatabase.getInstance();
         listPhotos=new ArrayList<>();
-        myrv=root.findViewById(R.id.weekly_rec_id);
+        myrv=root.findViewById(R.id.photographer2_rec_id);
+        link1=root.findViewById(R.id.link1);
         myrv.setHasFixedSize(true);
         myrv.setLayoutManager(new GridLayoutManager(getContext(),3));
         myAdap = new RecyclerViewAdapter1(getContext(),listPhotos);
@@ -58,11 +62,12 @@ public class weekly_fg extends Fragment {
 
         SharedPreferences pref = getContext().getSharedPreferences("MyPref", 0); // 0 - for private mode
         SharedPreferences.Editor editor = pref.edit();
-        editor.putInt("Page",1);
+        editor.putInt("Page",4);
         editor.apply();
 
 
-        databaseReference = firebaseDatabase.getReference("samples");
+        databaseReference = firebaseDatabase.getReference("photographer2");
+
 
         databaseReference.addValueEventListener(new ValueEventListener() {
             @Override
@@ -83,6 +88,29 @@ public class weekly_fg extends Fragment {
             }
         });
 
+        link1.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View view) {
+                AlertDialog alert_dia1=new AlertDialog.Builder(getContext()).create();
+                alert_dia1.setTitle("View Photographer?");
+                alert_dia1.setMessage("Do you want to view the photographer's profile in Instagram?");
+
+                alert_dia1.setButton(AlertDialog.BUTTON_POSITIVE, "Yes", new DialogInterface.OnClickListener() {
+                    @Override
+                    public void onClick(DialogInterface dialog, int which) {
+                        startActivity(new Intent(Intent.ACTION_VIEW, Uri.parse("https://www.instagram.com/cute_p_i_k_a_c_h_u/")));
+                    }
+                });
+                alert_dia1.setButton(AlertDialog.BUTTON_NEGATIVE, "No", new DialogInterface.OnClickListener() {
+                    @Override
+                    public void onClick(DialogInterface dialog, int which) {
+                        dialog.cancel();
+                    }
+                });
+                alert_dia1.show();
+
+            }
+        });
 
         return root;
     }

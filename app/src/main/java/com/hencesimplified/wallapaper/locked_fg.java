@@ -59,7 +59,7 @@ public class locked_fg extends Fragment {
 
         SharedPreferences pref = getContext().getSharedPreferences("MyPref", 0); // 0 - for private mode
         SharedPreferences.Editor editor = pref.edit();
-        editor.putInt("Page",3);
+        editor.putInt("Page",5);
         editor.apply();
 
         databaseReference = firebaseDatabase.getReference("locked");
