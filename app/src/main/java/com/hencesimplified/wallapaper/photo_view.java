@@ -206,6 +206,7 @@ public class photo_view extends AppCompatActivity {
         finish();
         Intent page_intent=new Intent(photo_view.this,MainActivity.class);
         startActivity(page_intent);
+        overridePendingTransition(R.anim.right_enter,R.anim.left_out);
     }
 
 
