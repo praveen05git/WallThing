@@ -5,7 +5,7 @@
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     android:background="@color/bgColor"
-    tools:context=".ad_Screen">
+    tools:context=".AdsActivity">
 
     <TextView
         android:id="@+id/txt_internet_err2"

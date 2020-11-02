@@ -18,11 +18,11 @@ import java.util.List;
 
 public class RecyclerViewAdapter1 extends RecyclerView.Adapter<RecyclerViewAdapter1.MyViewFolder> {
     private Context mcontext;
-    private List<sample_photos> mdata;
+    private List<SamplePhotos> mdata;
 
-    public RecyclerViewAdapter1(Context context, List<sample_photos> listBook) {
-        mcontext=context;
-        mdata=listBook;
+    public RecyclerViewAdapter1(Context context, List<SamplePhotos> listBook) {
+        mcontext = context;
+        mdata = listBook;
     }
 
 
@@ -31,7 +31,7 @@ public class RecyclerViewAdapter1 extends RecyclerView.Adapter<RecyclerViewAdapt
     public MyViewFolder onCreateViewHolder(@NonNull ViewGroup parent, int viewType) {
         View view;
         LayoutInflater minflater = LayoutInflater.from(mcontext);
-        view = minflater.inflate(R.layout.cardview_layout_photos,parent,false);
+        view = minflater.inflate(R.layout.cardview_layout_photos, parent, false);
         return new MyViewFolder(view);
     }
 
@@ -40,21 +40,21 @@ public class RecyclerViewAdapter1 extends RecyclerView.Adapter<RecyclerViewAdapt
 
         holder.tv_book_title.setText(mdata.get(position).getName());
 
-         Picasso.get()
+        Picasso.get()
                 .load(mdata.get(position).getUrl())
                 .fit()
                 .centerCrop()
                 .into(holder.book_thumbnil);
 
-         holder.cardView.setOnClickListener(new View.OnClickListener() {
-             @Override
-             public void onClick(View view) {
-                String img= mdata.get(position).getUrl();
-                 Intent FreePhotoIntent = new Intent(mcontext, photo_view.class);
-                 FreePhotoIntent.putExtra("img_url_ad", img);
-                 mcontext.startActivity(FreePhotoIntent);
-             }
-         });
+        holder.cardView.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View view) {
+                String img = mdata.get(position).getUrl();
+                Intent FreePhotoIntent = new Intent(mcontext, PhotoViewActivity.class);
+                FreePhotoIntent.putExtra("img_url_ad", img);
+                mcontext.startActivity(FreePhotoIntent);
+            }
+        });
 
 
     }
@@ -65,16 +65,16 @@ public class RecyclerViewAdapter1 extends RecyclerView.Adapter<RecyclerViewAdapt
     }
 
 
-    public static class MyViewFolder extends RecyclerView.ViewHolder{
+    public static class MyViewFolder extends RecyclerView.ViewHolder {
         TextView tv_book_title;
         ImageView book_thumbnil;
         CardView cardView;
 
         public MyViewFolder(@NonNull View itemView) {
             super(itemView);
-            tv_book_title =  itemView.findViewById(R.id.photo_title_id);
-            book_thumbnil= itemView.findViewById(R.id.photo_image_id) ;
-            cardView=itemView.findViewById(R.id.cardview_id);
+            tv_book_title = itemView.findViewById(R.id.photo_title_id);
+            book_thumbnil = itemView.findViewById(R.id.photo_image_id);
+            cardView = itemView.findViewById(R.id.cardview_id);
 
         }
     }
