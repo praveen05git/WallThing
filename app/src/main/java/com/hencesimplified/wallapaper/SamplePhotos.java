@@ -1,30 +1,30 @@
 package com.hencesimplified.wallapaper;
 
 public class SamplePhotos {
-    private String Name;
-    private String Url;
+    private String name;
+    private String url;
+
+    public String getName() {
+        return name;
+    }
+
+    public void setName(String name) {
+        this.name = name;
+    }
+
+    public String getUrl() {
+        return url;
+    }
+
+    public void setUrl(String url) {
+        this.url = url;
+    }
 
     public SamplePhotos() {
     }
 
     public SamplePhotos(String name, String url) {
-        Name = name;
-        Url = url;
-    }
-
-    public String getName() {
-        return Name;
-    }
-
-    public String getUrl() {
-        return Url;
-    }
-
-    public void setName(String name) {
-        Name = name;
-    }
-
-    public void setUrl(String url) {
-        Url = url;
+        this.name = name;
+        this.url = url;
     }
 }
