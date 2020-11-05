@@ -94,7 +94,6 @@ public class AdsActivity extends AppCompatActivity {
         super.onStart();
 
         if (UnityAds.isReady("rewardedVideo")) {
-            //UnityAds.initialize(ad_Screen.this,"3290908",listener);
             UnityAds.show(AdsActivity.this, "rewardedVideo");
         } else {
             UnityAds.initialize(AdsActivity.this, "UNITY_GAME_ID", listener);
