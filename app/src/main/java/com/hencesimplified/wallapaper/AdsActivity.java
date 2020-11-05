@@ -26,7 +26,7 @@ public class AdsActivity extends AppCompatActivity {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_ad__screen);
 
-        UnityAds.initialize(AdsActivity.this, "3290908", listener);
+        UnityAds.initialize(AdsActivity.this, "UNITY_GAME_ID", listener);
 
         assert getSupportActionBar() != null;   //null check
         getSupportActionBar().setDisplayHomeAsUpEnabled(true);   //show back button
@@ -43,7 +43,7 @@ public class AdsActivity extends AppCompatActivity {
             @Override
             public void onClick(View view) {
 
-                UnityAds.initialize(AdsActivity.this, "3290908", listener);
+                UnityAds.initialize(AdsActivity.this, "UNITY_GAME_ID", listener);
                 onStart();
 
             }
@@ -84,7 +84,7 @@ public class AdsActivity extends AppCompatActivity {
 
             txt_internet_err.setVisibility(View.VISIBLE);
             txt_internet_err2.setVisibility(View.VISIBLE);
-            UnityAds.initialize(AdsActivity.this, "3290908", listener);
+            UnityAds.initialize(AdsActivity.this, "UNITY_GAME_ID", listener);
             UnityAds.show(AdsActivity.this, "rewardedVideo");
         }
     }
@@ -97,7 +97,7 @@ public class AdsActivity extends AppCompatActivity {
             //UnityAds.initialize(ad_Screen.this,"3290908",listener);
             UnityAds.show(AdsActivity.this, "rewardedVideo");
         } else {
-            UnityAds.initialize(AdsActivity.this, "3290908", listener);
+            UnityAds.initialize(AdsActivity.this, "UNITY_GAME_ID", listener);
             txt_internet_err.setVisibility(View.VISIBLE);
             txt_internet_err2.setVisibility(View.VISIBLE);
         }
