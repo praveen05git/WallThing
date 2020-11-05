@@ -1,4 +1,4 @@
-# Wall_Thing_Pro
+# Wall Thing
 
 * Featured:
   * Wildlife: Enjoy fresh clicks from our wildlife photographer
