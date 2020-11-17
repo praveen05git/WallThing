@@ -41,6 +41,7 @@
 - Fragments are used to display each category in Bottom Navigation
 - Shared preferences are used to store last visited category and resumes when app repoens
 - Custom Transition animations between activities
+- Implemented Video Ads using Unity ADs
 </br>
 
 <p align="center">
