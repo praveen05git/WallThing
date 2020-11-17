@@ -1,9 +1,9 @@
 <h1 align="center">Wall Thing</h1>
 
 <p align="center">
-  Fremium Version of <a href="https://github.com/praveen05git/WallThingPro">Wall Thing Pro!!</a>
   Download and set new exclusive wallpapers for free!</br>
   No Ads except Exclusive wallpapers</br>
+  Fremium Version of <a href="https://github.com/praveen05git/WallThingPro">Wall Thing Pro!!</a></br>
 </p>
 </br>
 
