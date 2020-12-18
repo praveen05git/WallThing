@@ -1,0 +1,193 @@
+Index: .idea/runConfigurations.xml
+===================================================================
+--- .idea/runConfigurations.xml	(revision b3e69d2e0b7b27aeb0e1957bac20240fe6aba870)
++++ .idea/runConfigurations.xml	(revision b3e69d2e0b7b27aeb0e1957bac20240fe6aba870)
+@@ -1,12 +0,0 @@
+-<?xml version="1.0" encoding="UTF-8"?>
+-<project version="4">
+-  <component name="RunConfigurationProducerService">
+-    <option name="ignoredProducers">
+-      <set>
+-        <option value="org.jetbrains.plugins.gradle.execution.test.runner.AllInPackageGradleConfigurationProducer" />
+-        <option value="org.jetbrains.plugins.gradle.execution.test.runner.TestClassGradleConfigurationProducer" />
+-        <option value="org.jetbrains.plugins.gradle.execution.test.runner.TestMethodGradleConfigurationProducer" />
+-      </set>
+-    </option>
+-  </component>
+-</project>
+\ No newline at end of file
+Index: .idea/codeStyles/Project.xml
+===================================================================
+--- .idea/codeStyles/Project.xml	(revision b3e69d2e0b7b27aeb0e1957bac20240fe6aba870)
++++ .idea/codeStyles/Project.xml	(revision b3e69d2e0b7b27aeb0e1957bac20240fe6aba870)
+@@ -1,116 +0,0 @@
+-<component name="ProjectCodeStyleConfiguration">
+-  <code_scheme name="Project" version="173">
+-    <codeStyleSettings language="XML">
+-      <indentOptions>
+-        <option name="CONTINUATION_INDENT_SIZE" value="4" />
+-      </indentOptions>
+-      <arrangement>
+-        <rules>
+-          <section>
+-            <rule>
+-              <match>
+-                <AND>
+-                  <NAME>xmlns:android</NAME>
+-                  <XML_ATTRIBUTE />
+-                  <XML_NAMESPACE>^$</XML_NAMESPACE>
+-                </AND>
+-              </match>
+-            </rule>
+-          </section>
+-          <section>
+-            <rule>
+-              <match>
+-                <AND>
+-                  <NAME>xmlns:.*</NAME>
+-                  <XML_ATTRIBUTE />
+-                  <XML_NAMESPACE>^$</XML_NAMESPACE>
+-                </AND>
+-              </match>
+-              <order>BY_NAME</order>
+-            </rule>
+-          </section>
+-          <section>
+-            <rule>
+-              <match>
+-                <AND>
+-                  <NAME>.*:id</NAME>
+-                  <XML_ATTRIBUTE />
+-                  <XML_NAMESPACE>http://schemas.android.com/apk/res/android</XML_NAMESPACE>
+-                </AND>
+-              </match>
+-            </rule>
+-          </section>
+-          <section>
+-            <rule>
+-              <match>
+-                <AND>
+-                  <NAME>.*:name</NAME>
+-                  <XML_ATTRIBUTE />
+-                  <XML_NAMESPACE>http://schemas.android.com/apk/res/android</XML_NAMESPACE>
+-                </AND>
+-              </match>
+-            </rule>
+-          </section>
+-          <section>
+-            <rule>
+-              <match>
+-                <AND>
+-                  <NAME>name</NAME>
+-                  <XML_ATTRIBUTE />
+-                  <XML_NAMESPACE>^$</XML_NAMESPACE>
+-                </AND>
+-              </match>
+-            </rule>
+-          </section>
+-          <section>
+-            <rule>
+-              <match>
+-                <AND>
+-                  <NAME>style</NAME>
+-                  <XML_ATTRIBUTE />
+-                  <XML_NAMESPACE>^$</XML_NAMESPACE>
+-                </AND>
+-              </match>
+-            </rule>
+-          </section>
+-          <section>
+-            <rule>
+-              <match>
+-                <AND>
+-                  <NAME>.*</NAME>
+-                  <XML_ATTRIBUTE />
+-                  <XML_NAMESPACE>^$</XML_NAMESPACE>
+-                </AND>
+-              </match>
+-              <order>BY_NAME</order>
+-            </rule>
+-          </section>
+-          <section>
+-            <rule>
+-              <match>
+-                <AND>
+-                  <NAME>.*</NAME>
+-                  <XML_ATTRIBUTE />
+-                  <XML_NAMESPACE>http://schemas.android.com/apk/res/android</XML_NAMESPACE>
+-                </AND>
+-              </match>
+-              <order>ANDROID_ATTRIBUTE_ORDER</order>
+-            </rule>
+-          </section>
+-          <section>
+-            <rule>
+-              <match>
+-                <AND>
+-                  <NAME>.*</NAME>
+-                  <XML_ATTRIBUTE />
+-                  <XML_NAMESPACE>.*</XML_NAMESPACE>
+-                </AND>
+-              </match>
+-              <order>BY_NAME</order>
+-            </rule>
+-          </section>
+-        </rules>
+-      </arrangement>
+-    </codeStyleSettings>
+-  </code_scheme>
+-</component>
+\ No newline at end of file
+Index: .idea/render.experimental.xml
+===================================================================
+--- .idea/render.experimental.xml	(revision b3e69d2e0b7b27aeb0e1957bac20240fe6aba870)
++++ .idea/render.experimental.xml	(revision b3e69d2e0b7b27aeb0e1957bac20240fe6aba870)
+@@ -1,6 +0,0 @@
+-<?xml version="1.0" encoding="UTF-8"?>
+-<project version="4">
+-  <component name="RenderSettings">
+-    <option name="showDecorations" value="true" />
+-  </component>
+-</project>
+\ No newline at end of file
+Index: .idea/vcs.xml
+IDEA additional info:
+Subsystem: com.intellij.openapi.diff.impl.patch.BaseRevisionTextPatchEP
+<+><?xml version=\"1.0\" encoding=\"UTF-8\"?>\r\n<project version=\"4\">\r\n  <component name=\"VcsDirectoryMappings\">\r\n    <mapping directory=\"$PROJECT_DIR$\" vcs=\"Git\" />\r\n  </component>\r\n</project>
+Subsystem: com.intellij.openapi.diff.impl.patch.CharsetEP
+<+>UTF-8
+===================================================================
+--- .idea/vcs.xml	(revision b3e69d2e0b7b27aeb0e1957bac20240fe6aba870)
++++ .idea/vcs.xml	(date 1608312533233)
+@@ -1,6 +1,6 @@
+ <?xml version="1.0" encoding="UTF-8"?>
+ <project version="4">
+   <component name="VcsDirectoryMappings">
+-    <mapping directory="$PROJECT_DIR$" vcs="Git" />
++    <mapping directory="" vcs="Git" />
+   </component>
+ </project>
+\ No newline at end of file
+Index: .idea/gradle.xml
+IDEA additional info:
+Subsystem: com.intellij.openapi.diff.impl.patch.BaseRevisionTextPatchEP
+<+><?xml version=\"1.0\" encoding=\"UTF-8\"?>\r\n<project version=\"4\">\r\n  <component name=\"GradleMigrationSettings\" migrationVersion=\"1\" />\r\n  <component name=\"GradleSettings\">\r\n    <option name=\"linkedExternalProjectsSettings\">\r\n      <GradleProjectSettings>\r\n        <option name=\"testRunner\" value=\"PLATFORM\" />\r\n        <option name=\"distributionType\" value=\"DEFAULT_WRAPPED\" />\r\n        <option name=\"externalProjectPath\" value=\"$PROJECT_DIR$\" />\r\n        <option name=\"modules\">\r\n          <set>\r\n            <option value=\"$PROJECT_DIR$\" />\r\n            <option value=\"$PROJECT_DIR$/app\" />\r\n            <option value=\"$PROJECT_DIR$/unity-ads\" />\r\n          </set>\r\n        </option>\r\n        <option name=\"resolveModulePerSourceSet\" value=\"false\" />\r\n        <option name=\"useQualifiedModuleNames\" value=\"true\" />\r\n      </GradleProjectSettings>\r\n    </option>\r\n  </component>\r\n</project>
+Subsystem: com.intellij.openapi.diff.impl.patch.CharsetEP
+<+>UTF-8
+===================================================================
+--- .idea/gradle.xml	(revision b3e69d2e0b7b27aeb0e1957bac20240fe6aba870)
++++ .idea/gradle.xml	(date 1608312533296)
+@@ -1,12 +1,12 @@
+ <?xml version="1.0" encoding="UTF-8"?>
+ <project version="4">
+-  <component name="GradleMigrationSettings" migrationVersion="1" />
+   <component name="GradleSettings">
+     <option name="linkedExternalProjectsSettings">
+       <GradleProjectSettings>
+         <option name="testRunner" value="PLATFORM" />
+         <option name="distributionType" value="DEFAULT_WRAPPED" />
+         <option name="externalProjectPath" value="$PROJECT_DIR$" />
++        <option name="gradleJvm" value="1.8" />
+         <option name="modules">
+           <set>
+             <option value="$PROJECT_DIR$" />
